@@ -1,32 +1,18 @@
-*, ::after, ::before {
-    box-sizing: border-box;
-}
-
-
-
 body {
-    margin: 0;
-    padding: 0;
-    
     font-weight: 400;
     font-family: 'Ubuntu', sans-serif;
     color: #323130;
 }
 
 :root{
-   
-    font-size: 1em;
+   font-size: 1em;
 }
-
-
 
 @media (max-width:800px){
     :root{
         font-size: 1.2em;
     }
 }
-
-
 
 @media (min-width:1200px){
     :root{
@@ -125,19 +111,17 @@ button {
 
 @media (max-width: 800px){
     .navbar-collapse {
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        left: -100%;
-        width: 100%;
-        padding: 1.5em 1em;
-        overflow-y: auto;
-        visibility: hidden;
-        background-color: #6c757d;
-        display: grid;
-        align-items: center;
-        justify-content: center;
+         
+
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 2.1em;
+        max-width: 100%;
+        background-color: #eee;
     }
+
+}
 
     .navbar-collapse {
         -ms-flex-preferred-size: 100%;
@@ -147,3 +131,52 @@ button {
         -ms-flex-align: center;
         align-items: center;
     }
+
+.navbar-nav{
+        
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none;
+}
+
+.dropdown {
+    position: relative;
+}
+
+ul > li {
+    list-style: none;
+    line-height: 2.8;
+}
+
+.navbar-toggler .fa{
+    width: 1.8em;
+    height: 1.8em;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    border: none;
+}
+
+.navbar-droppdown{
+    display: inline-block;
+    position: relative;
+}
+
+.navbar-droppdown:hover .navbar-collapse{
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 1.5em 1em; 
+    background-color: #6c757d;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+    
